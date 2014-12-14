@@ -1,0 +1,55 @@
+{
+  "name": "butterfly",
+  "version": "0.2.0",
+  "authors": [
+    "Justin Yip <justin.yip@foxmail.com>"
+  ],
+  "description": "Butterfly Mobile Web Framework",
+  "main": "dist/js/butterfly.js",
+  "keywords": ["HTML5", "Mobile", "Web"],
+  "license": "MIT",
+  "homepage": "http://yezhiming.github.io/butterfly",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "tests",
+    "examples",
+    "stylus"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "requirejs": "*",
+    "requirejs-text": "*",
+    "requirejs-i18n": "*",
+    "requirejs-domready": "*",
+    "require-css": "*",
+    "requirejs-hogan-plugin": "*",
+    "fastclick": "*",
+    "iscroll": "*",
+    "jquery": "*",
+    "zepto": "*",
+    "underscore": "*",
+    "backbone": "*",
+    "moment": "*",
+    "spinjs": "*",
+    "jquery-hammerjs": "*"
+  },
+  "exportsOverride": {
+    "requirejs-domready": {
+      "": "domReady.js"
+    },
+    "requirejs-i18n": {
+      "": "i18n.js"
+    },
+    "requirejs-text": {
+      "": "text.js"
+    },
+    "requirejs-hogan-plugin": {
+      "": "h*.js"
+    },
+    "iscroll": {
+      "": "build/*"
+    }
+  }
+}

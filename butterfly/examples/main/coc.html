@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Butterfly.js CoC Test Case</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+
+  <meta http-equiv="X-Frame-Options" content="ALLOW-FROM">
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link href="../butterfly/css/butterfly.css" rel="stylesheet"/>
+  <!--
+  <script src="http://192.168.1.106:8080/target/target-script-min.js#anonymous"></script>
+  -->
+  <script>
+  var require = {
+    paths: {
+      autosize: 'components/jquery.autosize'
+    }
+  }
+  </script>
+  <script type="text/javascript" src="../butterfly/js/require.js" data-main="../butterfly/js/butterfly-amd"></script>
+  <style>
+  #main {
+    position: absolute;
+    top: 0px; bottom: 0px; left: 0px; right: 0px;
+  }
+  #main > div.active {
+    visibility: visible;
+  }
+  #main > div {
+    width: 100%; height: 100%;
+  }
+  </style>
+</head>
+<body>
+
+    <div id="main" data-window="$coccontainer">
+    </div>
+
+</body>
+</html>

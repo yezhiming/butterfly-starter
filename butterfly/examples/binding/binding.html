@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>butterfly.js view binding</title>
+	<script type="text/javascript" src="../vendor/zepto/zepto.js"></script>
+	<script type="text/javascript" src="../vendor/underscore/underscore.js"></script>
+	<script type="text/javascript" src="../js/butterfly.js"></script>
+</head>
+<body>
+	<div bt-view="demo-view">
+		<button id="click-me">Click Me</button>
+	</div>
+
+	<script>
+	Butterfly.define("demo-view", function(view){
+		view.events = {
+			"click #click-me": 'onClickMe'
+		}
+
+		view.onClickMe = function(){
+			alert('on click me');
+		}
+		
+	});
+	</script>
+
+</body>
+</html>

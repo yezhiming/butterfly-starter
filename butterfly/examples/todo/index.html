@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+
+  <meta http-equiv="X-Frame-Options" content="ALLOW-FROM">
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <!-- 3rd part UI ratchet -->
+  <link href="ratchet/css/ratchet.css" rel="stylesheet"/>
+  <!-- <link href="../ratchet/css/ratchet-theme-ios.min.css" rel="stylesheet"/> -->
+  <!-- butterfly.js UI -->
+  <link href="butterfly/css/butterfly.css" rel="stylesheet"/>
+
+  <script type="text/javascript" src="butterfly/js/require.js" data-main="butterfly/js/butterfly-amd"></script>
+</head>
+<body>
+
+    <script id="cell-template" type="text/x-template">
+        <%= name %>
+        <a href="">delete</a>
+    </script>
+
+    <div id="main" data-view="$StackView">
+
+      <div id="main-page" data-view="index">
+        <header class="bar bar-nav">
+          <a id="refresh" class="icon icon-refresh pull-left"></a>
+          <a id="edit" class="icon icon-edit pull-right"></a>
+          <h1 class="title">Tasks</h1>
+        </header>
+        <div class="content">
+
+          <!-- Bind to ListView Component-->
+          <!-- 使用表达式，或注册实例ID（全局），extend的时候给一个ID？new一个的时候给一个ID？-->
+          <div id="todo-list"
+               data-view="listview"
+               data-collection="{superview.tasks}"
+               data-itemTemplate="#cell-template"
+               data-iscroll="false">
+
+            <div class="scroller">
+              <ul class="table-view">
+
+              </ul>
+              <button class="loadmore visible btn btn-block btn-outlined">
+                <div class="label">加载更多</div>
+                <span class="icon"></span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- useless, for demo validation -->
+          <div data-view="$view"/>
+
+        </div>
+      </div>
+
+    </div>
+
+</body>
+</html>
